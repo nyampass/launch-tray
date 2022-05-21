@@ -7,11 +7,14 @@ Prepare the following configuration file.
 ~/.launch-tray.json
 
 ```
-[
-    {
-        "name": "Notify",
-        "exec": "sleep 3; osascript -e 'on run argv display notification item 1 of argv end run' -- 'xxx'"
-    },
-    ....
-]
+{
+    "shell": "/bin/zsh",
+    "menus": [
+        {
+            "name": "Notify",
+            "exec": "sleep 3; osascript -e 'display notification \"message\"'"
+        },
+        ...
+    ]
+}
 ```
