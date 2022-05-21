@@ -1,14 +1,16 @@
 from subprocess import Popen
 
 class Menu:
-    def __init__(self, name, exec):
+    def __init__(self, name, exec, shell):
         self.name = name
         self.exec = exec
+        self.shell = shell
         self.process = None
 
     def clicked(self):
         if self.process is None:
-            self.process = Popen(["/bin/bash", "-c", self.exec])
+            print([self.shell, "-c", self.exec])
+            self.process = Popen([self.shell, "-c", self.exec])
             return
         self.terminate()
         self.process = None
