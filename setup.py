@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['main.py']
+APP = ['Launch Tray.py']
 DATA_FILES = ['resources']
 OPTIONS = {
     'argv_emulation': True,
