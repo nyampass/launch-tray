@@ -12,7 +12,7 @@ class Menu:
             print([self.shell, "-c", self.exec])
             self.process = Popen([self.shell, "-c", self.exec])
             return
-        self.terminate()
+        self.process.terminate()
         self.process = None
 
     @property
