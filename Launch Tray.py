@@ -16,7 +16,7 @@ menus = [Menu(m['name'], m['exec'], shell) for m in configure['menus']]
 def register_menu(menu):
     @rumps.clicked(menu.name)
     def clicked(m):
-        menu.clicked()
+        menu.toggle()
         m.state = menu.checked
 
 for menu in menus:

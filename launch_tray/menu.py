@@ -7,7 +7,7 @@ class Menu:
         self.shell = shell
         self.process = None
 
-    def clicked(self):
+    def toggle(self):
         if self.process is None:
             print([self.shell, "-c", self.exec])
             self.process = Popen([self.shell, "-c", self.exec])
