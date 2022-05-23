@@ -4,7 +4,7 @@ import rumps
 
 from launch_tray.menu import Menu
 
-rumps.debug_mode(True)
+# rumps.debug_mode(True)
 
 configure_path = os.path.expanduser("~/.launch-tray.json")
 with open(configure_path, encoding="utf-8", mode="r") as f:
